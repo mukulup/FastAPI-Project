@@ -1,9 +1,11 @@
+from config.db import DB
 
 
-def UserModel(item):
-    return {
-        "_id": str(item['_id']),
-        "name": item.get("name"),
-        "email": item.get("email"),
-        "password": item.get("password"),
-    }
+class UserModel(DB):
+    def object(item):
+        return {
+            "_id": str(item.get('_id')),
+            "name": item.get("name"),
+            "email": item.get("email"),
+            "password": item.get("password"),
+        }

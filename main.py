@@ -1,8 +1,7 @@
 from fastapi import FastAPI
+from routers import *
 
 app = FastAPI()
 
 
-@app.get("/")
-def get_data():
-    return {"message": "Data Fetched Successfully", "success": True}
+app.include_router(router)
