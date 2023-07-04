@@ -16,6 +16,7 @@ async def get_data():
     except Exception as e:
         logging.info(f"Error while getting data, Error occured: {str(e)}")
 
+
 @router.post("")
 async def create_user(data: UserSchema):
     try:

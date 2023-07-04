@@ -30,7 +30,7 @@ class DB():
 
     @classmethod
     async def filter(cls, query):
-        try: 
+        try:
             db_document = await database[cls.__name__.lower()].find(query)
 
             if db_document:
