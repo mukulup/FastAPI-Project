@@ -29,7 +29,7 @@ async def create_user(data: UserSchema):
         logging.info(f"Error occured while creating new User {str(e)}")
 
 
-@router.get("")
+@router.get("/getAll")
 async def get_all_data():
     try:
         data = await UserModel.filter()

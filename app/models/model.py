@@ -8,4 +8,5 @@ class UserModel(DB):
             "name": item.get("name"),
             "email": item.get("email"),
             "password": item.get("password"),
+            "amount": item.get("amount"),
         }
